@@ -1,5 +1,6 @@
 #include <cstdlib>
 #include <iostream>
+#include <ostream>
 #include <string>
 #include <sstream>
 #include "LinkedList.h"
@@ -74,20 +75,20 @@ int main ()
     {
         Song aSong = randomSongGenerator();
         SongList.insertFirst(aSong);
-      //  for(int j = 0; j < SongList.length(); ++j)
-      //  {
-      //      std::cout << "List as of " << j << "is: " << SongList.getNode(j)->info.songName << std::endl;
-      //  }
     }
-    cout << "-------------------------------------------------------------" << endl;
     for(int i = 0; i < SongList.length(); ++i)
     {
-        //std::cout << SongList.getNode(i)->info.songName << std::endl;
+        std::cout << "Song " << i + 1 << " : " << endl;
+        std::cout << SongList.getNode(i)->info.songName << std::endl;
+        std::cout << SongList.getNode(i)->info.composerName << std::endl;
     }
     Song Radioactive("Imagine Dragons", "Radioactive");
     Song N95("Kendrick Lamar" , "N95"); 
     SongList.insertAfter(SongList.getNode(SongList.length()-1), Radioactive);
     SongList.insertAfter(SongList.getNode(SongList.length()/2), N95); 
+    cout << "-------------------------------------------------------------" << endl;
+    cout << "Add Radioactive and N95 at positions 101 and 50 respectively." << endl;
+    cout << "Searching for songs" << endl;
     if(SongList.search(Radioactive))
     {
         cout << "found " << Radioactive.songName << endl;
