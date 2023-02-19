@@ -1,7 +1,5 @@
 #include <cstdlib>
-#include <ctime>
 #include <iostream>
-#include <thread>
 #include <string>
 #include <forward_list>
 #include <sstream>
@@ -23,13 +21,6 @@ struct Song
         songName.erase();
 
     }
-//    Song(Song&& aSong)
-//    {
-//        this->songName = aSong.songName;
-//        this->composerName = aSong.composerName;
-//
-//
-//    }
     bool operator==(const Song aSong)
     {
         if(this->composerName == aSong.composerName && this->songName == aSong.songName)
