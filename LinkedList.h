@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <iterator>
 #include <string>
 
 
@@ -48,9 +49,6 @@ public:
 
 	int length() { return nodeCount; }
 
-	/// <summary>
-/// Insert at “beginning”
-/// </summary>
 
 	void insertFirst(const T& newInfo)
 		//pass info by constant reference
